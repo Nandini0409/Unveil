@@ -21,7 +21,7 @@ const fileEncryption = async (array) => {
     )
     encryptedFiles.push(encryptedFile)
   }
-  uploadFile(encryptedFiles)
+  uploadFile(encryptedFiles, cryptoKey)
 }
 
 export default fileEncryption;

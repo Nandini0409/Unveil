@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import FileTypeInput from './components/inputFile.jsx';
-import uploadFile from './utils/pinata.js';
+import FileTypeInput from './components/InputFile.jsx';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isConnect, setConnect] = useState(false)
+
   return (
     <>
       <FileTypeInput />
+      {isConnect ? <appkit-button /> : <button onClick={() => setConnect(true)}>Connect Wallet</button>}
+      
     </>
   )
 }
