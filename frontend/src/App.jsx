@@ -1,20 +1,18 @@
 import { useState } from 'react'
 import FileTypeInput from './components/InputFile.jsx';
-
+import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { useAccount } from 'wagmi'
 
 function App() {
-  const [isConnect, setConnect] = useState(false)
-
+  const { isConnected, address } = useAccount()
   return (
     <>
       <FileTypeInput />
-      {isConnect ? <appkit-button /> : <button onClick={() => setConnect(true)}>Connect Wallet</button>}
-      
+      <ConnectButton />
+      {isConnected ? <p>Connected as {address}</p> : <p>Not connected</p>}
     </>
   )
 }
 
 export default App
 
-
-//gateway--> lime-top-gorilla-58.mypinata.cloud
