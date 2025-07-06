@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import FileTypeInput from './components/InputFile.jsx';
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { useAccount } from 'wagmi'
+import Card from './components/imageCard.jsx';
 
 function App() {
-  const { isConnected, address } = useAccount()
   return (
     <>
-      <FileTypeInput />
+      {/* <FileTypeInput /> */}
+      <Card/>
       <ConnectButton />
-      {isConnected ? <p>Connected as {address}</p> : <p>Not connected</p>}
     </>
   )
 }
 
 export default App
 
+//Pick icons like 📷 lens, 🔗 chain, 🔊 speaker, 👁️ eye, 📣 megaphone, or 🧠 truth themes to represent your mission.

@@ -1,4 +1,4 @@
-import fileEncryption from "./encrypt"
+// import uploadFile from "./pinata"
 
 const fileReader = async (files) => {
   let arrayOfArrayBuffers = []
@@ -6,7 +6,9 @@ const fileReader = async (files) => {
     const buffer = await readFileAsBuffer(file)
     arrayOfArrayBuffers.push(buffer)
   }
-  fileEncryption(arrayOfArrayBuffers)
+  console.log(arrayOfArrayBuffers)
+  return arrayOfArrayBuffers
+  // uploadFile(arrayOfArrayBuffers)
 }
 
 const readFileAsBuffer = (file)=>{

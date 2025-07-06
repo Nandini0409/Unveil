@@ -1,7 +1,6 @@
 import { PinataSDK } from 'pinata'
 
-const uploadFile = async (files, encryptionKey) => {
-  console.log(encryptionKey)
+const uploadFile = async (files) => {
   const pinata = new PinataSDK({
     pinataJwt: import.meta.env.VITE_JWT,
     pinataGateway: import.meta.env.VITE_GATEWAY_URL
@@ -12,13 +11,4 @@ const uploadFile = async (files, encryptionKey) => {
   }
 }
 
-export default uploadFile;
-
-
-
-
-
-
-
-
-
+export default uploadFormData;

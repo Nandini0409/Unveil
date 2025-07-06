@@ -17,7 +17,6 @@ const config = getDefaultConfig({
   ssr: false,
 })
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
