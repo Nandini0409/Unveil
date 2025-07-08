@@ -49,7 +49,7 @@ const Card = () => {
           <label htmlFor="time">Select time</label>
           <input type="datetime-local" id="time" onChange={(e) => { setFormdata({ ...formdata, time: e.target.value }) }} />
         </div>
-        <div>
+        <div> 
           <label htmlFor="location">Add location</label>
           <input type="text" placeholder="city, state..." id="location" onChange={(e) => { setFormdata({ ...formdata, location: e.target.value }) }} />
         </div>

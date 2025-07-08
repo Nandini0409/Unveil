@@ -15,7 +15,7 @@ const uploadFormData = async (ipfsData) => {
   const result = await pinata.upload.public
     .fileArray(files)
 
-  console.log("uploaded to ipfs")
+  console.log("uploaded to ipfs", result.cid)
   return result.cid
 }
 

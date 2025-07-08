@@ -16,3 +16,12 @@ module.exports = buildModule("LockModule", (m) => {
 
   return { lock };
 });
+
+
+
+// Add an onlyOwner modifier that protects a deleteAllTasks() function:
+
+// solidity
+// Copy
+// Edit
+// function deleteAllTasks() public onlyOwner
