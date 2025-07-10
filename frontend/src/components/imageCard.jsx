@@ -2,9 +2,12 @@ import { useState } from "react"
 import fileReader from "../utils/readFile"
 import { useAccount } from 'wagmi'
 import uploadFormData from "../utils/pinata"
+import { useWriteContract } from 'wagmi'
+import {contractConfig} from "../contracts/fairlensConfig"
 
 const Card = () => {
   const { isConnected, address } = useAccount()
+  const { writeContractAsync } = useWriteContract()
   const [formdata, setFormdata] = useState({
     imgs: [],
     caption: '',
@@ -15,19 +18,27 @@ const Card = () => {
     downvote: 0,
     walletAddress: ''
   })
-  const formHandler = (e) => {
+  const formHandler = async (e) => {
     e.preventDefault()
     const updatedFormdata = { ...formdata, walletAddress: address }
     setFormdata(updatedFormdata)
+    console.log(address)
     const ipfsData = {
-      imgs : updatedFormdata.imgs,
-      caption : updatedFormdata.caption,
-      desc : updatedFormdata.desc,
-      time : updatedFormdata.time,
-      location : updatedFormdata.location
+      imgs: updatedFormdata.imgs,
+      caption: updatedFormdata.caption,
+      desc: updatedFormdata.desc,
+      time: updatedFormdata.time,
+      location: updatedFormdata.location
     }
-    const cid = uploadFormData(ipfsData)
-    console.log(cid)
+    const cid = await uploadFormData(ipfsData)
+    console.log(contractConfig.abi)
+    const result = writeContractAsync({
+      abi: contractConfig.abi,
+      address : contractConfig.address,
+      functionName: 'uploadImage',
+      args: [cid],
+    })
+    console.log(result)
   }
   return (
     <>
@@ -49,7 +60,7 @@ const Card = () => {
           <label htmlFor="time">Select time</label>
           <input type="datetime-local" id="time" onChange={(e) => { setFormdata({ ...formdata, time: e.target.value }) }} />
         </div>
-        <div> 
+        <div>
           <label htmlFor="location">Add location</label>
           <input type="text" placeholder="city, state..." id="location" onChange={(e) => { setFormdata({ ...formdata, location: e.target.value }) }} />
         </div>
@@ -64,3 +75,13 @@ const Card = () => {
 }
 
 export default Card
+
+
+// color pallate--->
+// #B3E7F2
+// #56878C
+// #14403B
+// #0C2624
+// #F2F2F2
+
+// Use transparency and fade-in effects to represent “unveiling”

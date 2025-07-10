@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={queryClient}>
       <WagmiProvider config={config}>
         <RainbowKitProvider chains={config.chains}>
-          <App />
+          <App style={{ backgroundColor: 'gray'}}/>
         </RainbowKitProvider>
       </WagmiProvider>
     </QueryClientProvider>
