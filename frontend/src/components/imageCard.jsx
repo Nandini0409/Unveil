@@ -3,7 +3,7 @@ import fileReader from "../utils/readFile"
 import { useAccount } from 'wagmi'
 import uploadFormData from "../utils/pinata"
 import { useWriteContract } from 'wagmi'
-import {contractConfig} from "../contracts/fairlensConfig"
+import { contractConfig } from "../contracts/fairlensConfig"
 
 const Card = () => {
   const { isConnected, address } = useAccount()
@@ -14,8 +14,7 @@ const Card = () => {
     desc: '',
     time: '',
     location: '',
-    upvote: 0,
-    downvote: 0,
+    votes: 0,
     walletAddress: ''
   })
   const formHandler = async (e) => {
@@ -34,7 +33,7 @@ const Card = () => {
     console.log(contractConfig.abi)
     const result = writeContractAsync({
       abi: contractConfig.abi,
-      address : contractConfig.address,
+      address: contractConfig.address,
       functionName: 'uploadImage',
       args: [cid],
     })
