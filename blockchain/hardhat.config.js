@@ -1,14 +1,13 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
 
-const { task } = require("hardhat/config");
-task("accounts", "Prints the list of accounts", async (args, hre) => {
-  const accounts = await hre.ethers.getSigners();
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
-
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.28",
+  solidity: "0.8.20",
+  networks: {
+    bnbTestnet: {
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545/", // BNB testnet RPC
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 97
+    }
+  }
 };

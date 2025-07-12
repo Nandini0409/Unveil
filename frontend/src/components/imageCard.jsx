@@ -3,7 +3,7 @@ import fileReader from "../utils/readFile"
 import { useAccount } from 'wagmi'
 import uploadFormData from "../utils/pinata"
 import { useWriteContract } from 'wagmi'
-import { contractConfig } from "../contracts/fairlensConfig"
+import { contractConfig } from "../config/UnveilConfig"
 
 const Card = () => {
   const { isConnected, address } = useAccount()
@@ -30,7 +30,6 @@ const Card = () => {
       location: updatedFormdata.location
     }
     const cid = await uploadFormData(ipfsData)
-    console.log(contractConfig.abi)
     const result = writeContractAsync({
       abi: contractConfig.abi,
       address: contractConfig.address,
@@ -84,3 +83,25 @@ export default Card
 // #F2F2F2
 
 // Use transparency and fade-in effects to represent “unveiling”
+
+
+
+
+
+// "caption": "Voices in the Shadows: A Student’s Protest Silenced",
+//   "desc": "In a small university town, hundreds of students staged a peaceful protest over rising tuition fees. The local police responded with batons and internet shutdowns. One student leader, Ayesha, shared her story anonymously, detailing how she was detained for 36 hours without a lawyer and questioned about political affiliations. Her statement exposes the quiet suppression of dissent happening in democratic settings. She calls for transparency, legal support for students, and international awareness of these actions.",
+//   "imgs": [],
+//   "time": "2025-07-10T10:45:00Z",
+//   "location": "Ahmedabad, India",
+//   "walletAddress": "0x1111fakewallet001",
+//   "votes": 0
+
+// "caption": "Poisoned Waters: A Town’s Secret Battle",
+//   "desc": "Residents of a remote town in Maharashtra noticed increasing illnesses — rashes, vomiting, and chronic fatigue. A local health worker collected samples and uncovered alarming levels of industrial waste in the groundwater. When the state health office failed to act, she uploaded her findings anonymously, fearing retaliation. This article includes redacted lab data and calls on national environmental watchdogs to intervene. The whistleblower urges citizens to test their own water and speak out.",
+//   "imgs": [],
+//   "time": "2025-07-08T16:00:00Z",
+//   "location": "Nashik, India",
+//   "walletAddress": "0x2222fakewallet002",
+//   "votes": 0
+
+// A former editor of a major news channel shares how government officials regularly called in to shape headlines and remove sensitive topics. She reveals email logs, pressure tactics, and the financial threats used to suppress uncomfortable truths. This anonymous piece offers a rare glimpse into newsroom politics and suggests a decentralized publishing platform may be the only way to protect honest journalism in the digital age.

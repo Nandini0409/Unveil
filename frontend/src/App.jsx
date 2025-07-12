@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import Card from './components/imageCard.jsx';
-import Hero from './components/HeroSection.jsx';
-import WhatIsUnveil from './components/WhatIsUnveil.jsx';
-import WhyUnveil from './components/WhyUnveil.jsx';
-import Footer from './components/Footer.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LandingPage from './pages/LandingPage.jsx'
+import Feed from './pages/Feed.jsx'
 
 function App() {
   return (
     <>
-      <Hero />
-      <WhatIsUnveil />
-      <WhyUnveil />
-      <Footer />
-      {/* <Card/> */}
-      <ConnectButton />
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/feed" element={<Feed />} />
+        </Routes>
+      </Router>
     </>
   )
 }

@@ -1,8 +1,8 @@
-import fairlensArtifact from "../abi/fairlens.json"
+import UnveilArtifact from "../abi/UnveilAbi.json"
 
 const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS
 
 export const contractConfig = {
   address: contractAddress,
-  abi: fairlensArtifact.abi,
+  abi: UnveilArtifact.abi,
 }
