@@ -1,78 +1,67 @@
 import { useState } from "react"
-import fileReader from "../utils/readFile"
+import fileReader from "../../utils/readFile"
 import { useAccount } from 'wagmi'
-import uploadFormData from "../utils/pinata"
+import uploadFormData from "../../utils/pinata"
 import { useWriteContract } from 'wagmi'
-import { contractConfig } from "../config/UnveilConfig"
+import { contractConfig } from "../../config/UnveilConfig"
 
-const Card = () => {
+const UploadForm = () => {
   const { isConnected, address } = useAccount()
   const { writeContractAsync } = useWriteContract()
   const [formdata, setFormdata] = useState({
-    imgs: [],
-    caption: '',
-    desc: '',
-    time: '',
+    title: '',
+    content: '',
+    walletAddress: '',
+    timestamp: '',
     location: '',
+    imgs: [],
     votes: 0,
-    walletAddress: ''
   })
   const formHandler = async (e) => {
     e.preventDefault()
-    const updatedFormdata = { ...formdata, walletAddress: address }
+    const updatedFormdata = { ...formdata, timestamp: new Date().toISOString(),  walletAddress: address }
     setFormdata(updatedFormdata)
-    console.log(address)
-    const ipfsData = {
-      imgs: updatedFormdata.imgs,
-      caption: updatedFormdata.caption,
-      desc: updatedFormdata.desc,
-      time: updatedFormdata.time,
-      location: updatedFormdata.location
-    }
+    const {walletAddress, votes, ...rest} = updatedFormdata
+    const ipfsData = {...rest}
     const cid = await uploadFormData(ipfsData)
-    const result = writeContractAsync({
+    const result = await writeContractAsync({
       abi: contractConfig.abi,
       address: contractConfig.address,
-      functionName: 'uploadImage',
+      functionName: 'uploadPost',
       args: [cid],
     })
-    console.log(result)
   }
   return (
     <>
       {!isConnected ? alert('connect wallet before uploading photo!') : <p>connected to {address}</p>}
       <form onSubmit={formHandler}>
         <div>
-          <label htmlFor="imageFile">Add files</label>
-          <input type="file" accept=".jpg,.jpeg,.png" id="imageFile" multiple onChange={async (e) => { setFormdata({ ...formdata, imgs: await fileReader(e.target.files) }) }} />
+          <label htmlFor="title">Add Title</label>
+          <input required type="text" id="title" onChange={(e) => { setFormdata({ ...formdata, title: e.target.value }) }} />
         </div>
         <div>
-          <label htmlFor="caption">Caption</label>
-          <input type="text" id="caption" onChange={(e) => { setFormdata({ ...formdata, caption: e.target.value }) }} />
-        </div>
-        <div>
-          <label htmlFor="desc">Description</label>
-          <textarea id="desc" onChange={(e) => setFormdata({ ...formdata, desc: e.target.value })}></textarea>
-        </div>
-        <div>
-          <label htmlFor="time">Select time</label>
-          <input type="datetime-local" id="time" onChange={(e) => { setFormdata({ ...formdata, time: e.target.value }) }} />
+          <label htmlFor="content">Add Content</label>
+          <textarea required id="content" onChange={(e) => setFormdata({ ...formdata, content: e.target.value })}></textarea>
         </div>
         <div>
           <label htmlFor="location">Add location</label>
-          <input type="text" placeholder="city, state..." id="location" onChange={(e) => { setFormdata({ ...formdata, location: e.target.value }) }} />
+          <input required type="text" placeholder="city, state..." id="location" onChange={(e) => { setFormdata({ ...formdata, location: e.target.value }) }} />
+        </div>
+        <div>
+          <label htmlFor="imageFile">Add files</label>
+          <input type="file" accept=".jpg,.jpeg,.png" id="imageFile" multiple onChange={async (e) => { setFormdata({ ...formdata, imgs: await fileReader(e.target.files) }) }} />
         </div>
         <div>
           <input type="checkbox" id="checkbox" required />
           <label htmlFor="checkbox">I confirm this image is truthful to the best of my knowledge.</label>
         </div>
-        <button type="submit" >Upload Image</button>
+        <button type="submit" >Upload Post</button>
       </form>
     </>
   )
 }
 
-export default Card
+export default UploadForm
 
 
 // color pallate--->

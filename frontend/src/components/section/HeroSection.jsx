@@ -9,16 +9,19 @@ const Hero = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (isConnected) {
-      navigate('/feed')
-    }
-  }, [isConnected])
-
+    if (isConnected === true) {
+    navigate('/feed')
+  }
+  }, [isConnected, navigate])
+  
   const handleClick = () => {
     if (!isConnected) {
       openConnectModal();
     }
-
+    else {
+      navigate('/feed')
+    }
+    
   }
   return (
     <section>

@@ -1,110 +1,82 @@
-{
-  "caption": "They Took My Brother Because He Filmed the Police",
-  "desc": "My brother, Aman, isn't an activist. He's just a student who happened to be in the wrong place with a phone. He filmed a group of officers hitting a street vendor in our neighborhood. That video went viral for a few hours. The next morning, two men in plainclothes came asking for him. We haven’t seen him since. That was two weeks ago. No FIR. No explanation. Just silence. I’m terrified. I don’t even know if posting this will make things worse. But someone has to know. If anyone out there has faced the same, please speak up. We can’t keep letting them make people disappear.",
-  "imgs": [],
-  "time": "2025-07-01T18:35:00Z",
-  "location": "Lucknow, India",
-  "walletAddress": "0x6A1...eB1",
-  "votes": 0
-}
+const mockPosts = [
+  
+  {
+    title: "The Factory That Makes Kids Sick",
+    content: `There’s a textile dyeing factory near our village. The water in our wells has turned pale green. The goats have stopped drinking from it. And the kids have started falling sick — constant stomach problems, skin rashes, and a strange bitter taste in the food cooked with the same water.
 
-{
-  "caption": "We Were Forced to Work Without Masks During the Leak",
-  "desc": "I worked at the plant in Sector 18 for over 6 years. When the leak happened last month, we were told to 'keep quiet' and 'get back to work.' The gas made my eyes burn and my chest tighten. But they didn’t stop operations. They didn't even give us masks. Five of my coworkers fell sick within days. One collapsed on the floor. We weren’t allowed to talk to the media. I’m posting this anonymously because I’m scared of losing my job — or worse. But people need to know what they’re doing to us in there.",
-  "imgs": [],
-  "time": "2025-07-03T11:00:00Z",
-  "location": "Vadodara, India",
-  "walletAddress": "0x4B2...9F3",
-  "votes": 0
-}
-✅ Article 3
-json
-Copy
-Edit
-{
-  "caption": "My Article Was Removed — Twice. Here It Is Again.",
-  "desc": "I wrote a piece exposing irregularities in a government housing scheme. Within hours of publishing it on two different platforms, both took it down citing ‘violations’. No explanation. No response. I didn’t name individuals. I cited public reports. Still, it vanished. So I’m posting it here. I don’t need likes or followers. I just want the truth out there. If you’re reading this, please make a copy. Censorship wins only when we stay silent.",
-  "imgs": [],
-  "time": "2025-07-04T14:20:00Z",
-  "location": "Jaipur, India",
-  "walletAddress": "0x812...2C4",
-  "votes": 0
-}
-✅ Article 4
-json
-Copy
-Edit
-{
-  "caption": "I Was Beaten for Asking About My Land",
-  "desc": "My name isn’t important. I live in a small village where our land was taken for a ‘project’ we never approved. I went to the district office to ask for papers. They told me to leave. The next day, two men came to my home and threatened my son. I still tried to go back and ask again. They beat me in front of the office. My neighbor filmed it. I don’t want money. I want justice. Or at least, I want people to know we’re not just statistics on some spreadsheet.",
-  "imgs": [],
-  "time": "2025-07-05T10:10:00Z",
-  "location": "Chhattisgarh, India",
-  "walletAddress": "0x9F5...7A0",
-  "votes": 0
-}
-✅ Article 5
-json
-Copy
-Edit
-{
-  "caption": "They Fired Me After I Reported the Safety Violations",
-  "desc": "I was a junior engineer at a private construction site. I reported a faulty scaffold to my supervisor — it collapsed the next week. A worker died. HR told me to 'keep quiet' and blamed the worker for 'carelessness'. I sent an internal complaint. A week later, I was let go for 'performance issues'. I kept every email, every image, every report. If anything happens to me, this is my record. The company knows what they did. And so will you now.",
-  "imgs": [],
-  "time": "2025-07-06T09:15:00Z",
-  "location": "Hyderabad, India",
-  "walletAddress": "0x3A7...F93",
-  "votes": 0
-}
-✅ Article 6
-json
-Copy
-Edit
-{
-  "caption": "A Call That Changed Everything",
-  "desc": "I was covering a protest for my small blog when I got a call from someone claiming to be from the Intelligence Bureau. They asked why I was spreading 'anti-national content'. I hung up. Hours later, my website was offline. I received an email from my hosting provider saying the site was under review. This is the reality of being a small, independent voice in a loud, state-run media environment. They don’t need to arrest you — they just erase you quietly.",
-  "imgs": [],
-  "time": "2025-07-06T17:45:00Z",
-  "location": "Delhi, India",
-  "walletAddress": "0x2C1...6AE",
-  "votes": 0
-}
-✅ Article 7
-json
-Copy
-Edit
-{
-  "caption": "They Bribed Us to Stay Quiet About the Chemical Spill",
-  "desc": "I worked near the Bhilai plant where the spill happened in June. They said it was 'minor'. It wasn’t. Fish started floating in the river. Children fell sick. Then they sent people door to door with ‘relief packages’ — food, money, and a waiver form. We were told to sign and not talk. My neighbor’s child still can’t breathe properly. I didn’t take their money. I don’t want it. I want someone to be held responsible. Even if I have to write this from a café 30km away just to get WiFi without being watched.",
-  "imgs": [],
-  "time": "2025-07-08T15:30:00Z",
-  "location": "Durg, India",
-  "walletAddress": "0x7D2...1B8",
-  "votes": 0
-}
-✅ Article 8
-json
-Copy
-Edit
-{
-  "caption": "My Internet Was Cut for a Tweet",
-  "desc": "I tweeted a video of a local rally that turned violent — but only after the police started pushing. That’s all I said. Within an hour, my tweet was flagged. By evening, my internet was down. Not just mine — a few others in my lane too. When I asked the provider, they said they were 'updating systems'. Funny timing. This is how digital control works now. They don’t knock on your door. They just switch you off.",
-  "imgs": [],
-  "time": "2025-07-09T12:00:00Z",
-  "location": "Pune, India",
-  "walletAddress": "0xD91...3B1",
-  "votes": 0
-}
-✅ Article 9
-json
-Copy
-Edit
-{
-  "caption": "I Still Don’t Know Why I Was Detained",
-  "desc": "I was standing outside the metro station holding a poster about free speech. I didn’t shout. I didn’t block traffic. Three cops came, took my ID, and told me I had to ‘come for questioning’. I was held for 9 hours, asked about my social media, my friends, even my college. No charges. Just questions. They let me go before midnight. My phone had been opened. My photos were gone. My only mistake was thinking I could speak freely. I’m not so sure anymore.",
-  "imgs": [],
-  "time": "2025-07-10T20:10:00Z",
-  "location": "Kolkata, India",
-  "walletAddress": "0x1F0...E52",
-  "votes": 0
-}
+At first, we thought it was seasonal. Then one local doctor quietly told me the truth: the chemicals being dumped by the factory were likely responsible. I collected samples and sent them to a lab. The results showed dangerous levels of chromium and lead.
+
+I confronted the plant manager. He smiled and said, “We have all the licenses. Go complain to whoever you want.” So I did — and no one responded. The Gram Panchayat said it was a state issue. The state helpline said it was under central regulation. It was a perfect loop of apathy.
+
+I’m attaching lab reports, photos of the water, and a copy of the complaint letter — all for documentation. Maybe someone will finally listen.`,
+    walletAddress: "0xFfA123Cc3344BbAaEe123999cDdBb11223344566",
+    timestamp: new Date().toISOString(),
+    location: "Erode, Tamil Nadu",
+    imgs: ["image_0.jpg", "image_1.jpg"],
+    votes: 0,
+  },
+  {
+    title: "Public School, Private Profits",
+    content: `I’m a teacher in a government school. Every year, the school receives funding for new desks, smartboards, tablets, and sometimes even for repainting the walls. But those things either don’t arrive — or arrive in such poor condition they’re unusable.
+
+This year, the school claimed on paper that 40 tablets were distributed. I checked the records. Only 12 arrived. When I brought it up, the head clerk told me to mind my own business.
+
+I began taking pictures and quietly recording meetings. I discovered a group of contractors who work with multiple schools, inflating costs and splitting kickbacks with local education officers. It’s heartbreaking. We still teach students under broken fans, asking them to bring chalk because the school can’t afford it.
+
+What’s worse is that anyone who speaks out is either transferred or threatened. I’m sharing this story under a pseudonym — not because I’m afraid, but because the children deserve better. Their education shouldn’t be a source of someone else's wealth.`,
+    walletAddress: "anonymous",
+    timestamp: new Date().toISOString(),
+    location: "Madhubani, Bihar",
+    imgs: [],
+    votes: 0,
+  },
+  {
+    title: "No Safety Gear, Just Luck: Life as a Sanitation Worker",
+    content: `I clean the city’s underground sewer lines. You read that right — by hand. I go down without protective suits. No gloves. No oxygen supply. Just a rope and someone standing above.
+
+This is supposed to be illegal. But contractors still hire us for a few hundred rupees a day. They mark our payments as “manual sweeping” to avoid scrutiny. Last year, I saw my co-worker pass out inside a chamber. We dragged him out. He never regained full memory after that.
+
+I asked why we aren’t given proper gear. “Too expensive,” they said. One contractor laughed and offered me a surgical mask instead of a gas mask.
+
+I post this here not for pity — but for change. No one should die in shit. That’s the truth.
+
+Attached is a photo I took from inside one of the chambers. My phone almost died from the gas — but I got the shot.`,
+    walletAddress: "0x900BcDDdA1123fDc456EAc333444BBccDDD99119",
+    timestamp: new Date().toISOString(),
+    location: "Lucknow, Uttar Pradesh",
+    imgs: ["image_0.jpg"],
+    votes: 0,
+  },
+  {
+    title: "The Cost of Silence in Mining Towns",
+    content: `I grew up in a mining town in Jharkhand. My father, uncles, and neighbors — all worked in the mines. Most of them now have chronic breathing problems. Some have died. The company gives them 10,000 rupees and a free stretcher ride home. That’s their compensation.
+
+When I started working at the site office, I found internal documents acknowledging dangerous levels of silica in the dust. They knew. They just didn’t care.
+
+When I brought it up in a staff meeting, I was told to “not create noise.” So I started collecting those documents — scans, emails, lab tests. This isn’t just about negligence — it’s about choosing profit over people’s lungs.
+
+I’m no longer working there. But I still live here. And every cough I hear reminds me why I need to speak up.
+
+I’m uploading everything I have — because the truth can’t stay buried underground forever.`,
+    walletAddress: "0xCDee9933AAccBB11887766FeEE002299BbAa3322",
+    timestamp: new Date().toISOString(),
+    location: "Dhanbad, Jharkhand",
+    imgs: ["image_0.jpg", "image_1.jpg", "image_2.jpg"],
+    votes: 0,
+  },
+  {
+    title: "This Highway Killed 12 People Last Month",
+    content: `I drive an ambulance. I’ve seen blood. I’ve seen death. But this highway — the NH-27 stretch near Bahraich — it’s cursed. There are no working street lights for 9 km. The lane dividers are broken. There’s no signage for villages, and pedestrians just try their luck crossing.
+
+Last month alone, we counted 12 accidents. Six were fatal. A truck overturned. A bike hit an old woman. A school van crashed into a ditch. And every time, we rushed there with no support. No police. No medical post. Just darkness.
+
+I wrote to the district office. No reply. I shared photos with a local journalist. He said it’s “too sensitive” to cover. I don’t have power. But I have truth. And wheels. And eyes.
+
+Attached are photos of the accident sites. If you’re reading this and someone you know travels that stretch — warn them. Until someone in power decides to care, it’s up to us.`,
+    walletAddress: "0xEaBb99112233CC44ddEEaa3344556677AbCdEf12",
+    timestamp: new Date().toISOString(),
+    location: "Bahraich, Uttar Pradesh",
+    imgs: ["image_0.jpg", "image_1.jpg"],
+    votes: 0,
+  },
+]
