@@ -8,9 +8,6 @@ const LandingPage = () => {
 
   return (
     <>
-    <h1 className="text-3xl font-bold underline text-blue-600">
-  Tailwind is working!
-</h1>
       <Navbar isConnected={false}/>
       <Hero />
       <WhatIsUnveil />

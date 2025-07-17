@@ -6,6 +6,7 @@ import { readContract } from 'wagmi/actions'
 import { config } from "../wagmi"
 import PostCard from "../components/layout/PostCard"
 import fetchFromIpfs from "../utils/fetchFromIpfs"
+import Footer from "../components/layout/Footer"
 
 const Feed = () => {
   const [posts, setPosts] = useState([])
@@ -31,10 +32,15 @@ const Feed = () => {
   return (
     <>
       <Navbar isConnect="true" />
+      <div className="bg-light">
+      <section className="grid grid-cols-2 p-5 gap-4 max-w-4xl mx-auto">
       {posts.map((post) => {
         if (!post) return null;
         return <PostCard key={post.cid} postData={post} />
       })}
+      </section>
+      </div>
+      <Footer />
     </>
   )
 }
