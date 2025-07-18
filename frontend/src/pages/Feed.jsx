@@ -32,14 +32,12 @@ const Feed = () => {
   return (
     <>
       <Navbar isConnect="true" />
-      <div className="bg-light">
-      <section className="grid grid-cols-2 p-5 gap-4 max-w-4xl mx-auto">
+      <section className="bg-[#cac6ca79] grid lg:grid-cols-3 sm:grid-cols-2 sm:p-5 p-1 mx-auto">
       {posts.map((post) => {
         if (!post) return null;
         return <PostCard key={post.cid} postData={post} />
       })}
       </section>
-      </div>
       <Footer />
     </>
   )
