@@ -12,9 +12,6 @@ const Navbar = () => {
   const UploadButtonHandler = () => {
     setIsUploadFormVisible(true)
   }
-  const showProfile = () => {
-
-  }
 
   return (
     <>

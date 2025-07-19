@@ -23,7 +23,7 @@ const PostCard = ({ postData }) => {
   <p className="text-gray-300 mb-4 text-sm line-clamp-3">{previewContent}</p>
 
   <div className="flex flex-wrap text-sm justify-between text-gray-400 mt-4 gap-y-2">
-    <div>👤 {userAddress.slice(0, 6)}...{userAddress.slice(-4)}</div>
+    <div>👤 {userAddress.slice(0, 3)}...{userAddress.slice(-3)}</div>
     <div>📍 {location}</div>
     <div>🕒 {new Date(timestamp).toLocaleString()}</div>
     <div>👍 {votes}</div>
