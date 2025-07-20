@@ -39,14 +39,14 @@ Unveil is a decentralized platform designed to empower users to safely and anony
 
 ## 🖼️ Screenshots
 
-### 🏠 Home Feed
+### 🏠 Home page
 ![Home Feed](./assets/screenshots/home.png)
 
-### 📝 Submit a Report
-![Submit Form](./assets/screenshots/submit.png)
+### 📰 Feed
+![Submit Form](./assets/screenshots/feed.png)
 
-### 🔍 Post Detail with Voting
-![Post Voting](./assets/screenshots/post-detail.png)
+### 🔍 Full Post
+![Post Voting](./assets/screenshots/fullPost.png)
 
 
 ## 📄 Smart Contract
