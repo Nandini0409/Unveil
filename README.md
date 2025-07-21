@@ -8,7 +8,7 @@ Unveil is a decentralized platform designed to empower users to safely and anony
 
 ## 📽️ Demo Video
 
-🎥 [Watch Demo video on loom](https://youtu.be/CaLsUDHOVs8)
+🎥 [Watch Demo video](https://youtu.be/CaLsUDHOVs8)
 
 
 ## ✨ Key Features
